@@ -1,0 +1,25 @@
+<h3>How to Pass Multiple Parameters to Pipe in Angular - ItsolutionStuff.com</h3>
+    
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Website</th>
+    <th>Desc</th>
+  </tr>
+  <tr *ngFor="let person of persons">
+    <td>{{ person.id }}</td>
+    <td>{{ person.name }}</td>
+    <td>{{ person.website }}</td>
+    <td>{{ person.desc | descPipe: person.id : person.name : person.website  }}</td>
+  </tr>
+</table>
+<br><br>
+
+<p> Multiplier:{{2 | Multiplier:10}}</p>
+
+<br>
+<br>
+
+<p>The hero's birthday is {{ birthday | date }}</p>
+<!-- <p>{{ value | upper | br}}</p> -->

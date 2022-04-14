@@ -1,0 +1,101 @@
+<!-- <div style="width: 500px; margin: auto;">
+    <div *ngIf="currentProduct" class="edit-form">
+      <h4>Product</h4>
+      <form>
+        <div class="form-group">
+          <label for="title">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            [(ngModel)]="currentProduct.name"
+            name="name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input
+            type="text"
+            class="form-control"
+            id="description"
+            [(ngModel)]="currentProduct.description"
+            name="description"
+          />
+        </div>
+        </form>
+  
+        <!-- <div class="form-group">
+          <label><strong>Status:</strong></label>
+  
+        </div>
+      </form>
+  
+      <button
+        class="badge badge-primary mr-2"
+        *ngIf="currentProduct.available"
+        (click)="setAvailableStatus(false)"
+      >
+        Set Not Available
+      </button>
+      <button
+        *ngIf="!currentProduct.available"
+        class="badge badge-primary mr-2"
+        (click)="setAvailableStatus(true)"
+      >
+        Set Available
+      </button> -->
+  
+      <!-- <button type="button" class="badge badge-danger mr-2" (click)="deleteProduct()">
+        Delete
+      </button>
+  
+      <button
+        type="button"
+        class="badge badge-success"
+        (click)="updateProduct()"
+      >
+        Update
+      </button>
+      <p></p>
+    </div>
+</div> -->
+  
+    <!-- <div *ngIf="!currentProduct">
+      <br />
+      <p>This product is not accessible</p>
+    </div>
+  </div> -->
+
+
+
+  <div class="container">
+    <h1>Update Post</h1>
+  
+    <a href="#" routerLink="/crud-api/index" class="btn btn-primary">Back</a>
+        
+    <form [formGroup]="form" (ngSubmit)="submit()">
+  
+        <div class="form-group">
+            <label for="title">Title:</label>
+            <input 
+                formControlName="title"
+                id="title" 
+                type="text" 
+                [(ngModel)]="post.title"
+                class="form-control">
+            
+        </div>
+         
+        <div class="form-group">
+            <label for="body">Body</label>
+          <input formControlName="body"
+                id="body" 
+                type="text" 
+                [(ngModel)]="post.body"
+                class="form-control">
+        
+        </div>
+        
+        <button class="btn btn-primary" [routerLink]="['/product-create']" routerLinkActive="router-link-active"  type="submit" [disabled]="!form.valid">Update</button>
+    </form>
+</div>
